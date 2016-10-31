@@ -121,8 +121,27 @@ header {
   text-transform:uppercase;
   letter-spacing: 1px;
 }
+h1 {
+  text-align: center;
+  font-weight:300;
+  font-size:2.4rem;
+  padding-top:2.2em;
+  padding-bottom:1.8em;
+}
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:600;
+  font-size:2rem;
+  padding-bottom:.6em;
+}
+h3 {
+  font-size:1.5rem;
+  font-weight:300;
+  padding-bottom:.6em;
+  letter-spacing: 0;
+}
 p {
-  font-size:18px;
+  font-size:16px;
   line-height:1.6;
 }
 a {
@@ -131,6 +150,31 @@ a {
 }
 a:hover {
   color:#831e0e;
+}
+/******************************
+  Structural
+******************************/
+@media only screen and (min-width: 990px) {
+  #binder.fluid.max-1188,
+  #binder.fluid.max-1188 .row {
+    max-width:990px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/******************************
+  Assets and utilities
+******************************/
+
+/**** Five teams ****/
+.fluid .row.single.five-teams .column {
+  display:flex;
+}
+.fluid .row.single.five-teams .column div {
+  width:35%;
+}
+.geo-bg {
+  background:url();
 }
 /******************************
   Homepage
