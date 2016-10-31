@@ -1,0 +1,137 @@
+/*
+ Theme Name:     NARA
+ Theme URI:      https://web.wsu.edu/
+ Description:    A custom theme for NARA using the WSU SPINE theme
+ Author:         WSU University Communications
+ Author URI:     https://ucomm.wsu.edu/
+ Template:       spine
+ Version:        0.0.1
+*/
+
+/****************************************************
+  Brand
+    Colors
+      Nara red: #a03221;
+      NARA Grey: #5e5e5e;
+      White: #fcfcfc;
+      NARA Blue: #0c9dd9;
+      NARA Dark Grey: #3d3e3d;
+      Nara Light Grey: #d1d2d4;
+    Fonts
+      font-family: 'Lora', serif;
+      font-family: 'Source Sans Pro', sans-serif;
+*****************************************************/
+/******************************
+  HTML general overrides
+******************************/
+* {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#3d3e3d;
+}
+/******************************
+  Spine overrides
+******************************/
+#spine {
+  display:none;
+}
+main {
+  margin-left:0;
+}
+#binder {
+  margin:0;
+}
+/******************************
+  Navigation
+******************************/
+nav[role=navigation] {
+  display:inline-flex;
+  flex-direction: row;
+  position: relative;
+  width:100%;
+  height:50px;
+  background:#a03221;
+}
+nav[role=navigation] ul {
+  display:flex;
+  position: absolute;
+  left:300px;
+  padding:1.8em 0 0 0;
+  margin:0 0 0;
+}
+nav[role=navigation] ul li {
+  margin-right:1em;
+  line-height: 0;
+  vertical-align: middle;
+}
+nav[role=navigation] ul li a {
+  color: #fcfcfc;
+  font-size:1.1rem;
+}
+/******************************
+  Logo
+******************************/
+#nara-logo img {
+  position: absolute;
+  width:220px;
+  height:auto;
+  margin-left:2em;
+}
+/******************************
+  Footer
+******************************/
+footer[role=footer] {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  padding:2em;
+  height:auto;
+  background:#d1d2d4;
+  color:#5e5e5e;
+  bottom:0;
+}
+footer[role=footer] header {
+  font-weight:600;
+}
+footer[role=footer] div.support {
+  width:50%;
+}
+footer[role=footer] div.commons {
+  width:30%;
+}
+footer[role=footer] div.quick-links {
+  width:20%;
+}
+footer[role=footer] div.quick-links ul {
+  padding-left:0;
+}
+/******************************
+  Typography
+******************************/
+h1,
+h3,
+header {
+  font-family: 'Lora', serif;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+}
+p {
+  font-size:18px;
+  line-height:1.6;
+}
+a {
+  color:#a03221;
+  transition: color 0.5s ease;
+}
+a:hover {
+  color:#831e0e;
+}
+/******************************
+  Homepage
+******************************/
