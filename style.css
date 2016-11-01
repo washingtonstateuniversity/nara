@@ -34,6 +34,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color:#3d3e3d;
+  background-color: #fcfcfc;
 }
 /******************************
   Spine overrides
@@ -99,11 +100,24 @@ footer[role=footer] {
 footer[role=footer] header {
   font-weight:600;
 }
+footer[role=footer] p,
+footer[role=footer] ul li{
+  line-height:1.4;
+}
 footer[role=footer] div.support {
-  width:50%;
+  width:45%;
+  margin-right:2.5%;
+}
+footer[role=footer] div.support img {
+  margin-top:.5em;
+  margin-right:1em;
+}
+footer[role=footer] div.support img:last-child {
+  margin-right:0;
 }
 footer[role=footer] div.commons {
-  width:30%;
+  width:35%;
+  margin-right:2.5%
 }
 footer[role=footer] div.quick-links {
   width:20%;
@@ -111,6 +125,12 @@ footer[role=footer] div.quick-links {
 footer[role=footer] div.quick-links ul {
   padding-left:0;
 }
+footer[role=footer] div.quick-links ul li {
+  border-bottom:1px solid #fcfcfc;
+  padding:.5em 0;
+}
+footer[role=footer] div.quick-links ul li:last-child {
+border-bottom:0; }
 /******************************
   Typography
 ******************************/
@@ -128,11 +148,15 @@ h1 {
   padding-top:2.2em;
   padding-bottom:1.8em;
 }
+.secondary-h1 h1 {
+  padding-bottom:1em;
+}
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight:600;
   font-size:2rem;
   padding-bottom:.6em;
+  text-transform: none;
 }
 h3 {
   font-size:1.5rem;
@@ -157,7 +181,7 @@ a:hover {
 @media only screen and (min-width: 990px) {
   #binder.fluid.max-1188,
   #binder.fluid.max-1188 .row {
-    max-width:990px;
+    max-width:790px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -167,14 +191,71 @@ a:hover {
 ******************************/
 
 /**** Five teams ****/
+.fluid .row.single.five-teams {
+  margin-top:2em;
+  padding:4em;
+}
+@media only screen and (min-width: 990px) {
+  #binder.fluid.max-1188 .row.five-teams {
+    max-width:990px;
+  }
+}
 .fluid .row.single.five-teams .column {
   display:flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-.fluid .row.single.five-teams .column div {
-  width:35%;
+.fluid .row.single.five-teams .column div.one,
+.fluid .row.single.five-teams .column div.two,
+.fluid .row.single.five-teams .column div.three,
+.fluid .row.single.five-teams .column div.four,
+.fluid .row.single.five-teams .column div.five {
+  display: block;
+  width:30%;
+  padding:.6em 2em 2em 2em;
+  margin-right:2em;
+  margin-bottom:3em;
+  background:#fcfcfc;
 }
+.fluid .row.single.five-teams .column div.five {
+  margin-right:0;
+}
+.fluid .row.single.five-teams .column .tab {
+  display:block;
+  padding:.4em;
+  color:#fcfcfc;
+  font-family: 'Lora', serif;
+  letter-spacing: 1px;
+  font-size:1.2rem;
+  text-transform: uppercase;
+  margin-left:-30px;
+  margin-bottom:1.5em;
+  width: 90%;
+  text-align: center;
+}
+.fluid .row.single.five-teams .column .tab.education {
+  background:#0c9dd9;
+}
+.fluid .row.single.five-teams .column .tab.sustainability {
+  background:#e68724;
+}
+.fluid .row.single.five-teams .column .tab.conversion {
+  background:#83296e;
+}
+.fluid .row.single.five-teams .column .tab.feed {
+  background:#ccd629;
+}
+.fluid .row.single.five-teams .column .tab.outreach {
+  background:#f0d910;
+}
+/**** Backgrounds ****/
 .geo-bg {
-  background:url();
+  background-image: url('assets/geobg.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  width:100%;
+  height:100%;
 }
 /******************************
   Homepage
