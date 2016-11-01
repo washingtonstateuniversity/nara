@@ -1,5 +1,5 @@
 WebFontConfig = {
-  google: { families: [ 'Lora:400,700|Source+Sans+Pro:400,400i,600,600i' ] }
+  google: { families: [ 'Lora:400|Source+Sans+Pro:400,400i,600' ] }
 };
 (function() {
   var wf = document.createElement('script');
