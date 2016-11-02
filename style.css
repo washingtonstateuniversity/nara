@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.4
+ Version:        0.0.5
 */
 
 /****************************************************
@@ -162,10 +162,12 @@ h2 {
 h3 {
   font-size:1.5rem;
   font-weight:300;
+  padding-top: 1em;
   padding-bottom:.6em;
   letter-spacing: 0;
 }
 h4 {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size:1.5rem;
   padding-bottom:.6em;
   padding-top:1.2em;
@@ -295,6 +297,10 @@ header.tab {
   width: 60%;
   text-align: center;
 }
+.global.tab {
+  margin-left:-35px;
+  width:40%;
+}
 .team.tab {
   display:block;
   padding:.4em;
@@ -332,6 +338,18 @@ header.tab {
 .bar-image {
   height:366px;
 }
+.has-geo-bg {
+  background-image: url('assets/geobg.jpg');
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position: center -1450px;
+}
+.has-geo-bg .column {
+  background-color:#fcfcfc;
+}
+.has-geo-bg  .h1-header:first-child {
+  margin-top:120px;
+}
 .section-wrapper-has-background {
     background-repeat: no-repeat;
     background-size: cover;
@@ -352,6 +370,7 @@ header.tab {
 .video p,
 .video a {
   color:#fcfcfc;
+  letter-spacing: 1px;
 }
 .video h1 {
   font-size:2rem;
@@ -380,6 +399,7 @@ header.tab {
 .page-publications h2 {
   margin-left:-20px;
 }
+/**** People and organizations ****/
 /******************************
   Homepage
 ******************************/
