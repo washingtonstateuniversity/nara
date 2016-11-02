@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.3
+ Version:        0.0.4
 */
 
 /****************************************************
@@ -52,15 +52,15 @@ main {
   Navigation
 ******************************/
 nav[role=navigation] {
-  display:inline-flex;
-  flex-direction: row;
   position: relative;
   width:100%;
   height:50px;
   background:#a03221;
+  z-index: 1000;
 }
 nav[role=navigation] ul {
   display:flex;
+  flex-direction: row;
   position: absolute;
   left:300px;
   padding:1.8em 0 0 0;
@@ -165,11 +165,21 @@ h3 {
   padding-bottom:.6em;
   letter-spacing: 0;
 }
-p,
-main ul li,
-main ol li  {
+h4 {
+  font-size:1.5rem;
+  padding-bottom:.6em;
+  padding-top:1.2em;
+  font-weight:400;
+}
+p {
   font-size:16px;
-  line-height:1.6;
+  line-height:1.4;
+}
+main ul li,
+main ol li,
+footer ul li {
+  font-size:16px;
+  line-height: 1.2;
 }
 a {
   color:#a03221;
@@ -179,6 +189,8 @@ a:hover {
   color:#831e0e;
 }
 hr {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
   border:0;
   background-color:#d1d2d4;
 }
@@ -259,7 +271,7 @@ hr {
 /**** Overlaps ****/
 .fluid .overlap .row.single .column {
   background-color:#fcfcfc;
-  max-width:590px;
+  max-width:790px;
   margin-top:-250px;
   margin-bottom:100px;
   margin-left:auto;
@@ -283,6 +295,32 @@ header.tab {
   width: 60%;
   text-align: center;
 }
+.team.tab {
+  display:block;
+  padding:.4em;
+  text-align: center;
+  width:90px;
+  height:45px;
+  margin-left: -35px;
+}
+.team.tab img {
+  height:35px !important;
+  width:auto;
+  margin:0;
+}
+.fluid .row.single .column.team-column {
+  background-color:#fcfcfc;
+  margin-top:95px;
+  z-index: 200;
+  padding-bottom:3em;
+}
+.fluid .row.single .column.team-column h1 {
+  padding-top:1em;
+}
+/** Team tabs **/
+.team.tab.sustainability {
+  background-color:#e68724;
+}
 /**** Backgrounds ****/
 .geo-bg {
   background-image: url('assets/geobg.jpg');
@@ -293,6 +331,54 @@ header.tab {
 }
 .bar-image {
   height:366px;
+}
+.section-wrapper-has-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/**** Videos ****/
+.video {
+  height:540px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  margin-top:-50px;
+  z-index: 50;
+}
+.video .single.gutter .column:not(.gutterless) {
+  padding-left:0;
+  padding-right:0;
+}
+.video h1,
+.video p,
+.video a {
+  color:#fcfcfc;
+}
+.video h1 {
+  font-size:2rem;
+  padding-bottom:.6em;
+  margin-bottom:.4em;
+  text-align:left;
+  border-bottom:1px solid #fcfcfc;
+}
+.video p {
+  font-size:22px;
+  line-height: 1.2;
+  font-weight:300;
+}
+.video a {
+  font-size:33px;
+}
+.sustain-video .video-contain {
+  width:48%;
+}
+/******************************
+  Page specifics
+******************************/
+/**** Publications, Infographics, Posters, and Presentations ****/
+
+.page-presentations h2,
+.page-publications h2 {
+  margin-left:-20px;
 }
 /******************************
   Homepage
