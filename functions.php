@@ -34,7 +34,7 @@ function nara_display_timeline_shortcode() {
 
 	return $content;
 }
-add_action( 'wp_enqueue_scripts', 'nara_enqueue_scripts');
+add_action( 'wp_enqueue_scripts', 'nara_enqueue_scripts' );
 /**
  * Enqueue custom scripting in child theme.
  */
