@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.5
+ Version:        0.0.6
 */
 
 /****************************************************
@@ -389,6 +389,34 @@ header.tab {
 }
 .sustain-video .video-contain {
   width:48%;
+}
+/**** Tablepress ****/
+.tablepress {
+  font-size: 16px;
+}
+.tablepress tbody td,
+.tablepress tfoot {
+  border-top-color:#d1d2d4;
+}
+.tablepress .odd td {
+  background-color:#e4e5e6;
+}
+.tablepress tfoot th,
+.tablepress thead th {
+  font-family: 'Lora', serif;
+  letter-spacing: 1px;
+  font-weight:400;
+  color:#3d3e3d;
+  background-color:#d1d2d4;
+}
+.tablepress .sorting:hover,
+.tablepress .sorting_asc,
+.tablepress .sorting_desc {
+  background-color: #3d3e3d;
+  color:#fcfcfc;
+}
+.tablepress .sorting:after {
+  color:#a03221;
 }
 /******************************
   Page specifics
