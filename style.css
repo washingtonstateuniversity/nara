@@ -361,10 +361,10 @@ header.tab {
   height:366px;
 }
 .has-geo-bg {
-  background-image: url('assets/geobg.jpg');
+  background-image: url('assets/has-geobg.jpg');
   background-repeat: no-repeat;
-  background-size:100%;
-  background-position: center -1450px;
+  background-size:contain;
+  background-position: top center;
 }
 .has-geo-bg .column {
   background-color:#fcfcfc;
