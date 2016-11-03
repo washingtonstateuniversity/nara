@@ -53,3 +53,11 @@ function nara_enqueue_scripts() {
 	wp_enqueue_script( 'nara-custom', get_stylesheet_directory_uri() . '/js/fontfamily.js', array( 'jquery' ), spine_get_script_version(), true );
 
 }
+
+add_action( 'init', 'medicine_remove_spine_wp_enqueue_scripts' );
+/**
+ * Removes the default Spine scripting so that we can use our custom version.
+ */
+function medicine_remove_spine_wp_enqueue_scripts() {
+	remove_action( 'wp_enqueue_scripts', 'spine_wp_enqueue_scripts', 20 );
+}
