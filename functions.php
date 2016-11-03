@@ -1,5 +1,16 @@
 <?php
 
+add_filter( 'spine_child_theme_version', 'nara_theme_version' );
+/**
+ * Provides a child theme version to use when breaking the cache on
+ * enqueued styles and scripts.
+ *
+ * @return string
+ */
+function nara_theme_version() {
+	return '0.0.5';
+}
+
 add_filter( 'wsuwp_uc_people_to_add_to_content', 'nara_modify_uc_object_people_content', 10, 1 );
 /**
  * Stops the display of associated people at the bottom of Team (Project) pages
