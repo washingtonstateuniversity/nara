@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.8
+ Version:        0.0.10
 */
 
 /* --- have Spine nav use Open Sans --- */
@@ -1070,7 +1070,7 @@ header.tab {
 }
 
 .video .video-contain {
-	width: 45%;
+	width: 50%;
 	vertical-align: middle;
 	padding-top: 5%;
 }
@@ -1088,7 +1088,7 @@ header.tab {
 }
 
 .video h1 {
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	padding-bottom: .6em;
 	margin-bottom: .4em;
 	text-align: left;
@@ -1096,7 +1096,7 @@ header.tab {
 }
 
 .video p {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.2;
 }
 
