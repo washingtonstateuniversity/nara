@@ -461,11 +461,17 @@ header.tab {
 
 /**** Videos ****/
 .video {
-	height: 540px;
+	height: 550px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top: -50px;
 	z-index: 50;
+}
+
+.video .video-contain {
+	width: 45%;
+	vertical-align: middle;
+	padding-top: 5%;
 }
 
 .video .single.gutter .column:not(.gutterless) {
@@ -491,69 +497,10 @@ header.tab {
 .video p {
 	font-size: 18px;
 	line-height: 1.2;
-	font-weight: 300;
 }
 
 .video a {
 	font-size: 33px;
-}
-
-.video-forest-resid .video-contain,
-.sustain-video .video-contain {
-	width: 48%;
-}
-
-.video-forest-resid .video-contain h1 {
-	padding-top: .8em;
-}
-
-.video-how-to .video-contain {
-	width: 50%;
-}
-
-.video-how-to .video-contain p,
-.video-how-to .video-contain h1 {
-	color: #3d3e3d;
-}
-
-.video-how-to .video-contain h1 {
-	border-color: #3d3e3d;
-}
-
-.education-video .video-contain,
-.conversion-video .video-contain {
-	width: 38%;
-}
-
-.video.education-video {
-	background-position: 0 -100px;
-}
-
-.video.conversion-video {
-	background-position: 0 -150px;
-}
-
-.high-value-video .video-contain {
-	width: 60%;
-	float: right;
-}
-
-.high-value-video .video-contain h1 {
-	border-color: #3d3e3d;
-}
-
-.high-value-video .video-contain p,
-.high-value-video .video-contain h1,
-.high-value-video .video-contain a {
-	color: #3d3e3d;
-}
-
-.video.high-value-video {
-	background-position: 0 30px;
-}
-
-.life-cycle-video .video-contain {
-	width: 50%;
 }
 
 /**** Tablepress ****/
