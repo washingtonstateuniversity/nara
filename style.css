@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.6
+ Version:        0.0.8
 */
 
 /* --- have Spine nav use Open Sans --- */
@@ -770,7 +770,7 @@ h2 {
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 600;
 	font-size: 2rem;
-	padding-top: .6em;
+	padding-top: 1.2em;
 	padding-bottom: .6em;
 	text-transform: none;
 }
@@ -791,6 +791,10 @@ h4 {
 	font-weight: 400;
 }
 
+h2 + h4 {
+	padding-top: .3em;
+}
+
 header + hr,
 h4 + hr {
 	margin-top: 0;
@@ -805,7 +809,8 @@ main ul li,
 main ol li,
 footer ul li {
 	font-size: 16px;
-	line-height: 1.2;
+	line-height: 1.4;
+	padding-bottom: .5em;
 }
 
 a {
@@ -816,6 +821,10 @@ a {
 
 a:hover {
 	color: #831e0e;
+}
+
+a.more {
+	font-size: 22px;
 }
 
 blockquote {
@@ -1008,7 +1017,6 @@ header.tab {
 	background-color: #fcfcfc;
 	margin-top: 95px;
 	z-index: 200;
-	padding-bottom: 3em;
 }
 
 .fluid .row.single .column.margin-up {
@@ -1054,11 +1062,17 @@ header.tab {
 
 /**** Videos ****/
 .video {
-	height: 540px;
+	height: 550px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top: -50px;
 	z-index: 50;
+}
+
+.video .video-contain {
+	width: 45%;
+	vertical-align: middle;
+	padding-top: 5%;
 }
 
 .video .single.gutter .column:not(.gutterless) {
@@ -1074,7 +1088,7 @@ header.tab {
 }
 
 .video h1 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	padding-bottom: .6em;
 	margin-bottom: .4em;
 	text-align: left;
@@ -1082,48 +1096,12 @@ header.tab {
 }
 
 .video p {
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 1.2;
-	font-weight: 300;
 }
 
 .video a {
 	font-size: 33px;
-}
-
-.video-forest-resid .video-contain,
-.sustain-video .video-contain {
-	width: 48%;
-}
-
-.video-forest-resid .video-contain h1 {
-	padding-top: .8em;
-}
-
-.video-how-to .video-contain {
-	width: 50%;
-}
-
-.video-how-to .video-contain p,
-.video-how-to .video-contain h1 {
-	color: #3d3e3d;
-}
-
-.video-how-to .video-contain h1 {
-	border-color: #3d3e3d;
-}
-
-.education-video .video-contain,
-.conversion-video .video-contain {
-	width: 38%;
-}
-
-.video.education-video {
-	background-position: 0 -100px;
-}
-
-.video.conversion-video {
-	background-position: 0 -150px;
 }
 
 /**** Tablepress ****/
@@ -1197,7 +1175,6 @@ header.tab {
 }
 
 .home-banner p a.more {
-	font-size: 20px;
 	padding-top: 3em;
 	display: block;
 	cursor: pointer;
