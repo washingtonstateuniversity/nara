@@ -641,11 +641,7 @@ body.single-post h2:first-of-type {
 
 /**** People and organizations ****/
 
-body.post-type-archive-wsuwp_uc_entity.archive figure {
-	display: block;
-}
-
-.single-wsuwp_uc_entity .flex-body {
+.flex-body {
 	display: flex;
 	justify-content: space-around;
 }
@@ -655,8 +651,62 @@ body.post-type-archive-wsuwp_uc_entity.archive figure {
 	margin-right: 20px;
 }
 
-.single-wsuwp_uc_entity .pager {
+.post-type-archive-wsuwp_uc_person article,
+.post-type-archive-wsuwp_uc_entity article {
+	border-bottom: 1px solid #d1d2d4;
+	padding-top: 1em;
+	padding-bottom: 1.4em;
+}
+
+.post-type-archive-wsuwp_uc_person article:last-child,
+.post-type-archive-wsuwp_uc_entity article:last-child {
+	border-bottom: 0;
+}
+
+.post-type-archive-wsuwp_uc_entity .row:not(.unscale) .column .flex-body figure {
+	width: 30%;
+	padding-top: 3em;
+	margin-right: 20px;
+}
+
+.post-type-archive-wsuwp_uc_entity .article-summary {
+	width: 70%;
+}
+
+.single-wsuwp_uc_entity .pager,
+.single-wsuwp_uc_person .pager {
 	display: none;
+}
+
+.single-wsuwp_uc_person .row:not(.unscale) .column figure.article-thumbnail {
+	margin-right: 20px;
+}
+
+.person-title,
+.person-title-secondary,
+.person-office,
+.person-email,
+.person-phone,
+.person-url {
+	font-size: 16px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.post-type-archive-wsuwp_uc_person figure.article-thumbnail {
+	float: none;
+	width: 20%;
+}
+
+.post-type-archive-wsuwp_uc_person .person-info {
+	width: 80%;
+}
+
+.single-wsuwp_uc_person figure.article-thumbnail {
+	width: 20%;
+}
+
+.single-wsuwp_uc_person .person-info {
+	width: 80%;
 }
 
 /******************************
