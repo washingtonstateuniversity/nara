@@ -46,7 +46,7 @@
 			<?php
 			// If a manual excerpt is available, display this. Otherwise, only the most basic information is needed.
 			if ( $post->post_excerpt ) {
-				echo get_the_excerpt();
+				echo esc_html( get_the_excerpt() );
 			}
 			?>
 		</div><!-- .article-summary -->

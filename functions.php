@@ -288,7 +288,7 @@ add_filter( 'get_the_excerpt', 'nara_trim_excerpt', 5 );
  */
 function nara_trim_excerpt( $text ) {
 	$raw_excerpt = $text;
-	if ( '' == $text ) {
+	if ( '' === $text ) {
 		//Retrieve the post content.
 		$text = get_the_content( '' );
 		//Delete all shortcode tags from the content.

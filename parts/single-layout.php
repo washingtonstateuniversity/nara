@@ -1,9 +1,9 @@
 <section class="row single h1-header gutter pad-top">
 	<div class="column one">
 		<h1><?php $category = get_the_category();
-if ( $category ) {
-    echo esc_html( $category[0]->cat_name );
-} ?></h1>
+		if ( $category ) {
+				echo esc_html( $category[0]->cat_name );
+		} ?></h1>
 	</div>
 </section>
 <section class="row side-right gutter pad-top pad-bottom">

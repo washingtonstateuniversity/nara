@@ -9,14 +9,14 @@
 	</header>
 	<div class="flex-body">
 	<figure class="logo">
-		<?php the_post_thumbnail('medium'); ?>
+		<?php the_post_thumbnail( 'medium' ); ?>
 	</figure>
 	<?php if ( ! is_singular() ) : ?>
 		<div class="article-summary">
 			<h2 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php
 			// If a manual excerpt is available, display this. Otherwise, only the most basic information is needed.
-		the_excerpt();
+			the_excerpt();
 			?>
 		</div><!-- .article-summary -->
 	<?php else : ?>
