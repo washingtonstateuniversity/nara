@@ -1,6 +1,6 @@
 <section class="row single h1-header gutter pad-top">
 	<div class="column one">
-		<h1><?php single_cat_title(''); ?></h1>
+		<h1><?php post_type_archive_title(); ?></h1>
 	</div>
 </section>
 <section class="row single gutter pad-top pad-bottom">

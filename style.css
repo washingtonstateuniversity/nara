@@ -1265,6 +1265,10 @@ body.single-post h2:first-of-type {
 	padding-bottom: 1.4em;
 }
 
+.post-type-archive-wsuwp_uc_person article {
+	padding-top: 1.4em;
+}
+
 .post-type-archive-wsuwp_uc_person article:last-child,
 .post-type-archive-wsuwp_uc_entity article:last-child {
 	border-bottom: 0;
