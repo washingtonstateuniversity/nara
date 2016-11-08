@@ -228,6 +228,7 @@ a {
 
 a:hover {
 	color: #831e0e;
+	transition: color .5s ease;
 }
 
 a.more {
@@ -549,7 +550,168 @@ header.tab {
 	margin-left: -20px;
 }
 
+/******************************
+  Arhive, Center Plugin, & posts
+******************************/
+
+.article-header hgroup.source,
+.article-header .hgroup.source,
+.categorized,
+.tagged-default,
+body.single-post footer.main-footer,
+body.single-post figure,
+body.single-wsuwp_uc_entity h4.article-title,
+body.archive.category figure,
+body.archive.category .article-summary img {
+	display: none;
+}
+
+.article-summary {
+	padding-bottom: .6em;
+}
+
+article footer {
+	color: #d1d2d4;
+	border-color: #d1d2d4;
+	margin-bottom: 1.3em;
+}
+
+aside.widget_search form input[type="text"] {
+	width: 100%;
+	height: 40px;
+	border: 0;
+	border-radius: 0;
+	background: #d1d2d4;
+	color: #3d3e3d;
+}
+
+aside.widget_search form input[type="submit"] {
+	background: transparent;
+	border: 0;
+	color: #a03221;
+	transition: color .5s ease;
+	font-size: 18px;
+	margin-top: 1em;
+	padding: 0;
+}
+
+aside.widget_search form input[type="submit"]:hover {
+	color: #831e0e;
+	transition: color .5s ease;
+}
+
+aside.widget header {
+	font-size: 18px;
+	padding-top: 2em;
+	padding-bottom: .6em;
+	margin-bottom: .8em;
+	border-bottom: 1px solid #d1d2d4;
+}
+
+aside.widget ul {
+	padding: .5em 0;
+}
+
+aside.widget ul li {
+	padding-bottom: 1em;
+}
+
+aside.widget.widget_archive ul li,
+aside.widget.widget_categories ul li {
+	padding-bottom: .4em;
+}
+
+footer.article-footer .tagged {
+	font-size: 16px;
+	letter-spacing: 0;
+}
+
+footer.main-footer.archive-footer {
+	padding-bottom: 2.4em;
+}
+
+footer.main-footer.archive-footer .pager {
+	text-align: left;
+	font-size: 16px;
+}
+
+body.single-post h2:first-of-type {
+	padding-top: 0;
+}
+
 /**** People and organizations ****/
+
+.flex-body {
+	display: flex;
+	justify-content: space-around;
+}
+
+.single-wsuwp_uc_entity .row:not(.unscale) .column .flex-body figure {
+	width: 100%;
+	margin-right: 20px;
+}
+
+.post-type-archive-wsuwp_uc_person article,
+.post-type-archive-wsuwp_uc_entity article {
+	border-bottom: 1px solid #d1d2d4;
+	padding-top: 1em;
+	padding-bottom: 1.4em;
+}
+
+.post-type-archive-wsuwp_uc_person article {
+	padding-top: 1.4em;
+}
+
+.post-type-archive-wsuwp_uc_person article:last-child,
+.post-type-archive-wsuwp_uc_entity article:last-child {
+	border-bottom: 0;
+}
+
+.post-type-archive-wsuwp_uc_entity .row:not(.unscale) .column .flex-body figure {
+	width: 30%;
+	padding-top: 3em;
+	margin-right: 20px;
+}
+
+.post-type-archive-wsuwp_uc_entity .article-summary {
+	width: 70%;
+}
+
+.single-wsuwp_uc_entity .pager,
+.single-wsuwp_uc_person .pager {
+	display: none;
+}
+
+.single-wsuwp_uc_person .row:not(.unscale) .column figure.article-thumbnail {
+	margin-right: 20px;
+}
+
+.person-title,
+.person-title-secondary,
+.person-office,
+.person-email,
+.person-phone,
+.person-url {
+	font-size: 16px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.post-type-archive-wsuwp_uc_person figure.article-thumbnail {
+	float: none;
+	width: 20%;
+}
+
+.post-type-archive-wsuwp_uc_person .person-info {
+	width: 80%;
+}
+
+.single-wsuwp_uc_person figure.article-thumbnail {
+	width: 20%;
+}
+
+.single-wsuwp_uc_person .person-info {
+	width: 80%;
+}
 
 /******************************
   Homepage

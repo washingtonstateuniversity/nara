@@ -8,7 +8,7 @@ add_filter( 'spine_child_theme_version', 'nara_theme_version' );
  * @return string
  */
 function nara_theme_version() {
-	return '0.0.5';
+	return '0.0.10';
 }
 
 add_filter( 'wsuwp_uc_people_to_add_to_content', 'nara_modify_uc_object_people_content', 10, 1 );
@@ -277,4 +277,42 @@ function nara_add_search_form_to_global_top_menu( $items, $args ) {
 	}
 
 	return $items . '<li class="search">' . get_search_form( false ) . '</li>';
+}
+add_filter( 'get_the_excerpt', 'nara_trim_excerpt', 5 );
+/**
+ * Provide a custom trimmed excerpt.
+ *
+ * @param string $text The raw excerpt.
+ *
+ * @return string The modified excerpt.
+ */
+function nara_trim_excerpt( $text ) {
+	$raw_excerpt = $text;
+	if ( '' === $text ) {
+		//Retrieve the post content.
+		$text = get_the_content( '' );
+		//Delete all shortcode tags from the content.
+		//$text = strip_shortcodes( $text );
+		//$allowed_tags = '<p>,<a>,<em>,<strong>,<img>,<h2>,<h3>,<h4>,<h5>,<blockquote>';
+		//$text = strip_tags( $text, $allowed_tags );
+		$text = apply_filters( 'the_content', $text );
+		if ( ! has_filter( 'the_content', 'wpautop' ) ) {
+			$text = wpautop( $text );
+		}
+		$text = str_replace( ']]>', ']]&gt;', $text );
+		$excerpt_word_count = 80;
+		$excerpt_length = apply_filters( 'excerpt_length', $excerpt_word_count );
+		$excerpt_end = ' <a href="' . get_permalink() . '" class="more">...more</a>';
+		$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
+		$words = preg_split( "/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY );
+		if ( count( $words ) > $excerpt_length ) {
+			array_pop( $words );
+			$text = implode( ' ', $words );
+			$text = $text . $excerpt_more;
+		} else {
+			$text = implode( ' ', $words );
+		}
+		$text = force_balance_tags( $text );
+	}
+	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
 }
