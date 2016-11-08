@@ -5,7 +5,7 @@
 	</div>
 	<div class="commons">
 		<header>Creative commons</header>
-		<p><a href="/creative-commons/">Our work is offered under Creative Commons licenses. All work on the site falls under the Attribution-NonCommercial license, unless otherwise noted</a></p>
+		<p><a href="/creative-commons/">Our work is offered under Creative Commons licenses. All work on the site falls under the Attribution-NonCommercial license BY-NC-ND, unless otherwise noted</a></p>
 	</div>
 	<div class="quick-links">
 		<header>Quick links</header>
