@@ -208,6 +208,10 @@ h4 + hr {
 	margin-top: 0;
 }
 
+hr + h4 {
+	padding-top: .4em;
+}
+
 p {
 	font-size: 16px;
 	line-height: 1.4;
@@ -233,6 +237,19 @@ a:hover {
 
 a.more {
 	font-size: 22px;
+}
+
+a.more:after {
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	font-family: Spine-Icons;
+	font-size: 22px;
+	content: "\F501";
+	transform: rotate(270deg);
+	line-height: 0;
+	margin-left: .6em;
+	vertical-align: middle;
 }
 
 blockquote {
@@ -271,6 +288,14 @@ hr {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	#binder.fluid.max-1188 .break-column .row {
+		max-width: 100%;
+	}
+}
+
+.break-column .single.gutter .column:not(.gutterless) {
+	padding: 0;
 }
 
 /******************************
@@ -365,6 +390,10 @@ hr {
 	margin-left: -35px;
 }
 
+.follow-overlap {
+	margin-top: -100px;
+}
+
 /**** Tabs ****/
 header.tab {
 	display: block;
@@ -392,6 +421,7 @@ header.tab {
 	width: 90px;
 	height: 45px;
 	margin-left: -35px;
+	margin-top: .4em;
 }
 
 .team.tab img {
@@ -447,6 +477,11 @@ header.tab {
 	background-position: top center;
 }
 
+.gray {
+	background: #e4e5e6;
+}
+
+.gray .column,
 .has-geo-bg .column {
 	background-color: #fcfcfc;
 }
