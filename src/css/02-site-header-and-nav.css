@@ -86,7 +86,8 @@
 	}
 
 	#spine .spine-sitenav > ul > li:first-child > a,
-	#spine .spine-sitenav > ul > li:first-child > a:hover {
+	#spine .spine-sitenav > ul > li:first-child > a:hover,
+	#spine .spine-sitenav > ul > li.active:first-child > a {
 		background: none;
 		padding-left: 0;
 	}
