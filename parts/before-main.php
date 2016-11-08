@@ -1,1 +1,2 @@
-<?php get_template_part( 'spine' ); ?>
+<?php
+get_template_part( 'spine' );
