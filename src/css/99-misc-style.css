@@ -47,46 +47,6 @@ main {
 }
 
 /******************************
-  Navigation
-******************************/
-nav[role="navigation"] {
-	display: flex;
-	position: relative;
-	width: 100%;
-	height: 50px;
-	background: #a03221;
-	z-index: 1000;
-}
-
-nav[role="navigation"] ul {
-	display: flex;
-	flex-direction: row;
-	padding: 1.8em 0 0;
-	margin: 0;
-}
-
-nav[role="navigation"] ul li {
-	margin-right: 1em;
-	line-height: 0;
-	vertical-align: middle;
-}
-
-nav[role="navigation"] ul li a {
-	color: #fcfcfc;
-	font-size: 1.1rem;
-	font-weight: 300;
-}
-
-/******************************
-  Logo
-******************************/
-#nara-logo img {
-	width: 220px;
-	height: auto;
-	margin-left: 2em;
-}
-
-/******************************
   Footer
 ******************************/
 footer[role="footer"] {
