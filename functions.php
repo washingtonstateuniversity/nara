@@ -278,6 +278,7 @@ function nara_add_search_form_to_global_top_menu( $items, $args ) {
 
 	return $items . '<li class="search">' . get_search_form( false ) . '</li>';
 }
+
 add_filter( 'get_the_excerpt', 'nara_trim_excerpt', 5 );
 /**
  * Provide a custom trimmed excerpt.
@@ -315,4 +316,20 @@ function nara_trim_excerpt( $text ) {
 		$text = force_balance_tags( $text );
 	}
 	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
+}
+
+add_filter( 'spine_get_campus_home_url', 'nara_spine_signature_url' );
+/**
+ * Filter the Spine signature URL.
+ */
+function nara_spine_signature_url() {
+	return get_site_url();
+}
+
+add_filter( 'spine_get_campus_data', 'nara_spine_signature_text' );
+/**
+ * Filter the Spine signature URL.
+ */
+function nara_spine_signature_text() {
+	return 'Northwest Advanced Renewables Alliance';
 }
