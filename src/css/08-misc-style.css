@@ -756,6 +756,7 @@ body.single-post h2:first-of-type {
 	padding-top: 3em;
 	display: block;
 	cursor: pointer;
+	line-height: 1.1;
 }
 
 .wood-wing {
