@@ -203,7 +203,7 @@ a.more:after {
 	height: 22px;
 	width: 22px;
 	font-family: Spine-Icons;
-	font-size: 18px;
+	font-size: 16px;
 	content: "\F501";
 	transform: rotate(270deg);
 	line-height: 0;
