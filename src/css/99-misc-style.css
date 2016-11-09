@@ -67,6 +67,7 @@ footer[role="footer"] header {
 footer[role="footer"] p,
 footer[role="footer"] ul li {
 	line-height: 1.4;
+	font-size: 1em;
 }
 
 footer[role="footer"] div.support {
@@ -204,6 +205,22 @@ a.more:after {
 	line-height: 0;
 	margin-left: .6em;
 	vertical-align: middle;
+}
+
+.video a.more:after {
+	display: inline-block;
+	font-family: Spine-Icons;
+	font-size: 22px;
+	content: "\F501";
+	border: 2px solid #fcfcfc;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 2;
+	height: 42px;
+	width: 42px;
+	margin-left: .6em;
+	vertical-align: middle;
+	transform: rotate(270deg);
 }
 
 blockquote {
@@ -441,7 +458,7 @@ header.tab {
 }
 
 .has-geo-bg .h1-header:first-child {
-	margin-top: 120px;
+	margin-top: 80px;
 }
 
 .section-wrapper-has-background {
@@ -482,6 +499,7 @@ header.tab {
 	margin-bottom: .4em;
 	text-align: left;
 	border-bottom: 1px solid #fcfcfc;
+	letter-spacing: 2px;
 }
 
 .video p {

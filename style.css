@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.10
+ Version:        0.0.12
 */
 
 #wsu-signature,
@@ -401,6 +401,7 @@ footer[role="footer"] header {
 footer[role="footer"] p,
 footer[role="footer"] ul li {
 	line-height: 1.4;
+	font-size: 1em;
 }
 
 footer[role="footer"] div.support {
@@ -536,15 +537,30 @@ a.more:after {
 	font-family: Spine-Icons;
 	font-size: 22px;
 	content: "\F501";
-
 	-webkit-transform: rotate(270deg);
-
 	    -ms-transform: rotate(270deg);
-
 	        transform: rotate(270deg);
 	line-height: 0;
 	margin-left: .6em;
 	vertical-align: middle;
+}
+
+.video a.more:after {
+	display: inline-block;
+	font-family: Spine-Icons;
+	font-size: 22px;
+	content: "\F501";
+	border: 2px solid #fcfcfc;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 2;
+	height: 42px;
+	width: 42px;
+	margin-left: .6em;
+	vertical-align: middle;
+	-webkit-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
 }
 
 blockquote {
@@ -790,7 +806,7 @@ header.tab {
 }
 
 .has-geo-bg .h1-header:first-child {
-	margin-top: 120px;
+	margin-top: 80px;
 }
 
 .section-wrapper-has-background {
@@ -831,6 +847,7 @@ header.tab {
 	margin-bottom: .4em;
 	text-align: left;
 	border-bottom: 1px solid #fcfcfc;
+	letter-spacing: 2px;
 }
 
 .video p {
