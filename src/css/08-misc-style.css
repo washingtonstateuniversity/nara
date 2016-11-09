@@ -263,6 +263,10 @@ hr {
 	#binder.fluid.max-1188 .break-column .row {
 		max-width: 100%;
 	}
+
+	#binder.fluid.max-1188 .row.five-teams {
+		max-width: 990px;
+	}
 }
 
 .break-column .single.gutter .column:not(.gutterless) {
@@ -277,13 +281,6 @@ hr {
 .fluid .row.single.five-teams {
 	margin-top: 2em;
 	padding: 4em;
-}
-
-@media only screen and (min-width: 990px) {
-
-	#binder.fluid.max-1188 .row.five-teams {
-		max-width: 990px;
-	}
 }
 
 .fluid .row.single.five-teams .column {
