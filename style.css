@@ -534,7 +534,7 @@ main ul li,
 main ol li,
 footer ul li {
 	font-size: 16px;
-	line-height: 1.4;
+	line-height: 1.2;
 	padding-bottom: .5em;
 }
 
@@ -591,6 +591,18 @@ strong.labeled {
 	-webkit-transform: rotate(270deg);
 	    -ms-transform: rotate(270deg);
 	        transform: rotate(270deg);
+	-webkit-transition: border .5s ease;
+	transition: border .5s ease;
+}
+
+.video a:hover {
+	color: #831e0e;
+}
+
+.video a.more:hover:after {
+	border: 2px solid #831e0e;
+	-webkit-transition: border .5s ease;
+	transition: border .5s ease;
 }
 
 blockquote {

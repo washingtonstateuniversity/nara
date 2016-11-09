@@ -231,6 +231,16 @@ strong.labeled {
 	margin-left: .6em;
 	vertical-align: middle;
 	transform: rotate(270deg);
+	transition: border .5s ease;
+}
+
+.video a:hover {
+	color: #831e0e;
+}
+
+.video a.more:hover:after {
+	border: 2px solid #831e0e;
+	transition: border .5s ease;
 }
 
 blockquote {
