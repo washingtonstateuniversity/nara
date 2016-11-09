@@ -35,6 +35,11 @@ body {
 ******************************/
 main {
 	margin-left: 0;
+	min-height: calc(100vh - 50px - 190px);
+}
+
+.admin-bar main {
+	min-height: calc(100vh - 50px - 190px - 32px);
 }
 
 #binder {
@@ -193,13 +198,12 @@ a.more {
 	font-size: 18px;
 }
 
-aside.widget_search form input[type="submit"],
 a.more:after {
 	display: inline-block;
 	height: 22px;
 	width: 22px;
 	font-family: Spine-Icons;
-	font-size: 18px;
+	font-size: 16px;
 	content: "\F501";
 	transform: rotate(270deg);
 	line-height: 0;

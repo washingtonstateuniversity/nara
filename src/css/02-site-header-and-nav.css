@@ -31,6 +31,10 @@
 	padding-left: 0;
 }
 
+#spine .spine-sitenav ul li ul li.active a {
+	font-weight: 700;
+}
+
 #spine .spine-sitenav ul li.parent.opened:after {
 	display: block;
 	content: "\25C0";
