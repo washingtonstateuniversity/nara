@@ -336,7 +336,7 @@ function nara_spine_signature_text() {
 
 add_action( 'pre_get_posts', 'entity_other' );
 /**
- * Query the `wsuwp_uc_project` post type for the 104b category archive.
+ * Query the `wsuwp_uc_entity` post type for the "Other Grants" category archive.
  */
 function entity_other( $query ) {
 	if ( is_category( 'other-grants' ) && $query->is_main_query() ) {
