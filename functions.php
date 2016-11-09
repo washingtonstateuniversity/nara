@@ -8,7 +8,7 @@ add_filter( 'spine_child_theme_version', 'nara_theme_version' );
  * @return string
  */
 function nara_theme_version() {
-	return '0.0.14';
+	return '0.0.15';
 }
 
 add_filter( 'wsuwp_uc_people_to_add_to_content', 'nara_modify_uc_object_people_content', 10, 1 );

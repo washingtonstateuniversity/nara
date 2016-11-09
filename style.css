@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.14
+ Version:        0.0.15
 */
 
 #wsu-signature,
@@ -380,6 +380,11 @@ body {
 ******************************/
 main {
 	margin-left: 0;
+	min-height: calc(100vh - 50px - 190px);
+}
+
+.admin-bar main {
+	min-height: calc(100vh - 50px - 190px - 32px);
 }
 
 #binder {

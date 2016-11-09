@@ -35,6 +35,11 @@ body {
 ******************************/
 main {
 	margin-left: 0;
+	min-height: calc(100vh - 50px - 190px);
+}
+
+.admin-bar main {
+	min-height: calc(100vh - 50px - 190px - 32px);
 }
 
 #binder {
