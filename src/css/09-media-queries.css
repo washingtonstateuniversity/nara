@@ -1,0 +1,58 @@
+@media only screen and (max-width: 989px) {
+
+	.unbound.recto.verso {
+		left: 0;
+	}
+
+	.video .video-contain {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 0;
+	}
+
+	.home .video h1,
+	.video h1 {
+		padding-top: 3em;
+	}
+
+	.home-banner h1 {
+		white-space: normal;
+	}
+
+	.goal-container {
+		flex-direction: column;
+	}
+
+	.row .column {
+		float: none;
+	}
+
+	footer[role="footer"] {
+		flex-direction: column;
+	}
+
+	footer[role="footer"] div.support,
+	footer[role="footer"] div.commons,
+	footer[role="footer"] div.quick-links {
+		width: 100%;
+		padding-top: 1em;
+	}
+
+	#spine .spine-actions > ul,
+	.spine-mobile-open #spine #wsu-actions,
+	.spine-mobile #spine footer {
+		display: none;
+	}
+
+	.spine-mobile #spine .spine-navigation {
+		padding-top: 2.5em;
+	}
+
+	#spine .spine-sitenav ul li,
+	#shelve,
+	#shelve:after,
+	#shelve:before {
+		border-color: #fcfcfc;
+	}
+}
