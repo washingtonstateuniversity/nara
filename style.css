@@ -41,6 +41,11 @@
 	padding-left: 0;
 }
 
+#spine .spine-sitenav ul li ul li.active a {
+	font-weight: 700;
+	color: #5e5e5e;
+}
+
 #spine .spine-sitenav ul li.parent.opened:after {
 	display: block;
 	content: "\25C0";
@@ -1025,7 +1030,8 @@ body.single-post h2:first-of-type {
 }
 
 .post-type-archive-wsuwp_uc_person article,
-.post-type-archive-wsuwp_uc_entity article {
+.post-type-archive-wsuwp_uc_entity article,
+.archive.category-other-grants article {
 	border-bottom: 1px solid #d1d2d4;
 	padding-top: 1em;
 	padding-bottom: 1.4em;
@@ -1036,7 +1042,8 @@ body.single-post h2:first-of-type {
 }
 
 .post-type-archive-wsuwp_uc_person article:last-child,
-.post-type-archive-wsuwp_uc_entity article:last-child {
+.post-type-archive-wsuwp_uc_entity article:last-child,
+.archive.category-other-grants article:last-child {
 	border-bottom: 0;
 }
 
