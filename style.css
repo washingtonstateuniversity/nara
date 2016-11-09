@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.13
+ Version:        0.0.14
 */
 
 #wsu-signature,
@@ -39,6 +39,22 @@
 #spine .spine-sitenav > ul > li.active:first-child > a {
 	background: none;
 	padding-left: 0;
+}
+
+#spine .spine-sitenav ul li.parent.opened:after {
+	display: block;
+	content: "\25C0";
+	width: 0;
+	height: 50px;
+	font-size: 50px;
+	-webkit-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
+	color: #a03221;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	top: -5px;
 }
 
 @media screen and (max-width: 791px) {
@@ -245,7 +261,7 @@
 	}
 
 	#spine nav.spine-sitenav > ul > li > ul > li {
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid #969696;
 		display: inline-block;
 		margin-right: 2em;
 		max-width: 294px;
@@ -387,7 +403,7 @@ footer[role="footer"] {
 	    -ms-flex-direction: row;
 	        flex-direction: row;
 	width: 100%;
-	padding: 2em;
+	padding: 2em 5em;
 	height: auto;
 	background: #d1d2d4;
 	color: #5e5e5e;
@@ -431,11 +447,6 @@ footer[role="footer"] div.quick-links ul {
 	padding-left: 0;
 }
 
-footer[role="footer"] div.quick-links ul li {
-	border-bottom: 1px solid #fcfcfc;
-	padding: .5em 0;
-}
-
 footer[role="footer"] div.quick-links ul li:last-child {
 	border-bottom: 0;
 }
@@ -456,11 +467,15 @@ h1 {
 	font-weight: 300;
 	font-size: 2.4rem;
 	padding-top: 2.2em;
-	padding-bottom: 1.8em;
+	padding-bottom: 1.6em;
 }
 
 .secondary-h1 h1 {
 	padding-bottom: 1em;
+}
+
+h1 + h2 {
+	padding-top: 0;
 }
 
 h2 {
@@ -527,22 +542,29 @@ a:hover {
 }
 
 a.more {
-	font-size: 22px;
+	font-size: 18px;
 }
 
+aside.widget_search form input[type="submit"],
 a.more:after {
 	display: inline-block;
 	height: 22px;
 	width: 22px;
 	font-family: Spine-Icons;
-	font-size: 22px;
+	font-size: 18px;
 	content: "\F501";
 	-webkit-transform: rotate(270deg);
 	    -ms-transform: rotate(270deg);
 	        transform: rotate(270deg);
 	line-height: 0;
 	margin-left: .6em;
-	vertical-align: middle;
+	vertical-align: top;
+}
+
+strong.labeled {
+	margin-bottom: -40px;
+	position: relative;
+	display: block;
 }
 
 .video a.more:after {
@@ -578,7 +600,16 @@ blockquote p {
 }
 
 blockquote cite {
+	margin-top: .8em;
+	font-size: .8em;
+	display: block;
 	color: #5e5e5e;
+}
+
+cite:before {
+	content: "-";
+	display: inline-block;
+	width: 11px;
 }
 
 hr {
@@ -710,6 +741,10 @@ hr {
 	margin-top: -100px;
 }
 
+div#toc {
+	margin-top: 3em;
+}
+
 /**** Tabs ****/
 header.tab {
 	display: block;
@@ -765,10 +800,6 @@ header.tab {
 	z-index: 200;
 }
 
-.fluid .row.single .column.margin-up {
-	margin-top: 95px;
-}
-
 .fluid .row.single .column.team-column h1 {
 	padding-top: 1em;
 }
@@ -786,24 +817,12 @@ header.tab {
 	height: 366px;
 }
 
-.has-geo-bg {
-	background-image: url(assets/has-geobg.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top center;
-}
-
 .gray {
 	background: #e4e5e6;
 }
 
-.gray .column,
-.has-geo-bg .column {
+.gray .column {
 	background-color: #fcfcfc;
-}
-
-.has-geo-bg .h1-header:first-child {
-	margin-top: 80px;
 }
 
 .section-wrapper-has-background {
@@ -872,11 +891,12 @@ header.tab {
 
 .tablepress tfoot th,
 .tablepress thead th {
+	font-size: 1.2rem;
 	font-family: Lora, serif;
 	letter-spacing: 1px;
 	font-weight: 400;
 	color: #3d3e3d;
-	background-color: #d1d2d4;
+	background-color: transparent !important;
 }
 
 .tablepress .sorting:hover,
@@ -893,14 +913,6 @@ header.tab {
 /******************************
   Page specifics
 ******************************/
-
-/**** Publications, Infographics, Posters, and Presentations ****/
-.page-posters h2,
-.page-presentations h2,
-.page-publications h2,
-.key-pub h2 {
-	margin-left: -20px;
-}
 
 /******************************
   Arhive, Center Plugin, & posts
@@ -931,10 +943,10 @@ article footer {
 aside.widget_search form input[type="text"] {
 	width: 100%;
 	height: 40px;
-	border: 0;
 	border-radius: 0;
 	background: #d1d2d4;
 	color: #3d3e3d;
+	border: 1px solid #a8a9ab;
 }
 
 aside.widget_search form input[type="submit"] {
@@ -1053,6 +1065,8 @@ body.single-post h2:first-of-type {
 .person-url {
 	font-size: 16px;
 	font-family: "Source Sans Pro", sans-serif;
+	text-transform: none;
+	letter-spacing: 0;
 }
 
 .post-type-archive-wsuwp_uc_person figure.article-thumbnail {
@@ -1101,7 +1115,7 @@ body.single-post h2:first-of-type {
 }
 
 .wood-wing {
-	padding-top: 2.2em;
+	padding-top: .75em;
 	padding-bottom: 50%;
 }
 
@@ -1112,6 +1126,12 @@ body.single-post h2:first-of-type {
 	width: 100%;
 	font-weight: 300;
 	font-size: 2.2em;
+}
+
+.goals h1 + p {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .home .fluid .overlap .row.single .column {
@@ -1230,7 +1250,10 @@ body.single-post h2:first-of-type {
 		padding-top: 2.5em;
 	}
 
-	#spine .spine-sitenav ul li,
+	#spine .spine-sitenav ul li {
+		border-color: #969696;
+	}
+
 	#shelve,
 	#shelve:after,
 	#shelve:before {
