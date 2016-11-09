@@ -59,3 +59,14 @@
 		border-color: #fcfcfc;
 	}
 }
+
+@media only screen and (min-width: 1680px) {
+
+	.wood-wing {
+		padding-bottom: 70%;
+	}
+
+	footer[role="footer"] {
+		padding: 2em 20em;
+	}
+}
