@@ -217,22 +217,6 @@ strong.labeled {
 	display: block;
 }
 
-.video a.more:after {
-	display: inline-block;
-	font-family: Spine-Icons;
-	font-size: 22px;
-	content: "\F501";
-	border: 2px solid #fcfcfc;
-	border-radius: 100px;
-	text-align: center;
-	line-height: 2;
-	height: 42px;
-	width: 42px;
-	margin-left: .6em;
-	vertical-align: middle;
-	transform: rotate(270deg);
-}
-
 blockquote {
 	width: 80%;
 	margin: auto;
@@ -468,51 +452,6 @@ header.tab {
 .section-wrapper-has-background {
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-/**** Videos ****/
-.video {
-	height: 550px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin-top: -50px;
-	z-index: 50;
-}
-
-.video .video-contain {
-	width: 50%;
-	vertical-align: middle;
-	padding-top: 5%;
-}
-
-.video .single.gutter .column:not(.gutterless) {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.video h1,
-.video p,
-.video a {
-	color: #fcfcfc;
-	letter-spacing: 1px;
-}
-
-.video h1 {
-	font-size: 1.7rem;
-	padding-bottom: .6em;
-	margin-bottom: .4em;
-	text-align: left;
-	border-bottom: 1px solid #fcfcfc;
-	letter-spacing: 2px;
-}
-
-.video p {
-	font-size: 20px;
-	line-height: 1.2;
-}
-
-.video a {
-	font-size: 33px;
 }
 
 /**** Tablepress ****/
@@ -804,18 +743,4 @@ body.single-post h2:first-of-type {
 .goal-container .goal-desc {
 	flex: 2;
 	padding-left: 2em;
-}
-
-/**** video ****/
-.home .video {
-	margin-top: -150px;
-}
-
-.home .video .video-contain {
-	width: 90%;
-	margin: auto;
-}
-
-.home .video h1 {
-	padding-top: 0;
 }
