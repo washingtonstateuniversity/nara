@@ -31,6 +31,20 @@
 	padding-left: 0;
 }
 
+#spine .spine-sitenav ul li.parent.opened:after {
+	display: block;
+	content: "\25C0";
+	width: 0;
+	height: 50px;
+	font-size: 50px;
+	transform: rotate(270deg);
+	color: #a03221;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	top: -5px;
+}
+
 @media screen and (max-width: 791px) {
 
 	#binder.fluid #spine #wsu-actions section {
@@ -218,7 +232,7 @@
 	}
 
 	#spine nav.spine-sitenav > ul > li > ul > li {
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid #969696;
 		display: inline-block;
 		margin-right: 2em;
 		max-width: 294px;
