@@ -8,7 +8,7 @@ add_filter( 'spine_child_theme_version', 'nara_theme_version' );
  * @return string
  */
 function nara_theme_version() {
-	return '0.0.10';
+	return '0.0.12';
 }
 
 add_filter( 'wsuwp_uc_people_to_add_to_content', 'nara_modify_uc_object_people_content', 10, 1 );
@@ -332,4 +332,16 @@ add_filter( 'spine_get_campus_data', 'nara_spine_signature_text' );
  */
 function nara_spine_signature_text() {
 	return 'Northwest Advanced Renewables Alliance';
+}
+
+add_action( 'pre_get_posts', 'entity_other' );
+/**
+ * Query the `wsuwp_uc_entity` post type for the "Other Grants" category archive.
+ */
+function entity_other( $query ) {
+	if ( is_category( 'other-grants' ) && $query->is_main_query() ) {
+		$query->set( 'post_type', array(
+			'wsuwp_uc_entity'
+		) );
+	}
 }
