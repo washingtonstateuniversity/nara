@@ -399,5 +399,9 @@ add_filter( 'wsuwp_uc_people_to_add_to_content', 'nara_uc_content_people' );
  * @return array The reversed array of people.
  */
 function nara_uc_content_people( $people ) {
-	return array_reverse( $people );
+	if ( is_array( $people ) ) {
+		$people = array_reverse( $people );
+	}
+
+	return $people;
 }
