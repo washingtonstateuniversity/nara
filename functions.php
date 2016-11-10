@@ -348,3 +348,44 @@ function entity_other( $query ) {
 		) );
 	}
 }
+
+add_filter( 'wsuwp_uc_people_sort_items', 'nara_uc_people_sort', 10, 1 );
+/*
+ * Sort people results before displaying.
+ */
+function nara_uc_people_sort( $people ) {
+	return array_reverse( $people );
+}
+
+add_filter( 'wsuwp_uc_people_item_html', 'nara_uc_people_html', 10, 2 );
+/**
+ * Provide a custom HTML template for use with syndicated people.
+ *
+ * @param string   $html   The HTML to output for an individual person.
+ * @param stdClass $person Object representing a person received from University Center Objects.
+ *
+ * @return string The HTML to output for a person.
+ */
+function nara_uc_people_html( $html, $person ) {
+	ob_start();
+	?>
+	<div class="uco-syndicate-person-container">
+		<div class="uco-syndicate-person-photo">
+			<?php if ( has_post_thumbnail( $person->id ) ) { ?>
+			<a href="<?php echo esc_url( $person->link ); ?>">
+				<?php echo get_the_post_thumbnail( $person->id, 'thumbnail' ); ?>
+			</a>
+			<?php } ?>
+		</div>
+		<div class="uco-syndicate-person-name">
+			<a href="<?php echo esc_url( $person->link ); ?>">
+				<?php echo esc_html( $person->title->rendered ); ?>
+			</a>
+		</div>
+	</div>
+	<?php
+	$html = ob_get_contents();
+	ob_end_clean();
+
+	return $html;
+}
