@@ -1,5 +1,8 @@
 <?php
 
+// Include the YouTube Embed plugin.
+include_once( __DIR__ . '/includes/youtube-embed.php' );
+
 add_filter( 'spine_child_theme_version', 'nara_theme_version' );
 /**
  * Provides a child theme version to use when breaking the cache on
