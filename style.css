@@ -1247,6 +1247,17 @@ body.single-post h2:first-of-type {
 		float: none;
 	}
 
+	.flex-body figure {
+		padding-bottom: 1em;
+	}
+
+	.flex-body {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
 	footer[role="footer"] {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -1279,6 +1290,10 @@ body.single-post h2:first-of-type {
 	#shelve:after,
 	#shelve:before {
 		border-color: #fcfcfc;
+	}
+
+	#spine .spine-sitenav ul li.parent.opened:after {
+		display: none;
 	}
 }
 

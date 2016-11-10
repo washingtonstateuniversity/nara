@@ -28,6 +28,14 @@
 		float: none;
 	}
 
+	.flex-body figure {
+		padding-bottom: 1em;
+	}
+
+	.flex-body {
+		flex-direction: column;
+	}
+
 	footer[role="footer"] {
 		flex-direction: column;
 	}
@@ -57,6 +65,10 @@
 	#shelve:after,
 	#shelve:before {
 		border-color: #fcfcfc;
+	}
+
+	#spine .spine-sitenav ul li.parent.opened:after {
+		display: none;
 	}
 }
 
