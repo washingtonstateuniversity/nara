@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.15
+ Version:        0.0.16
 */
 
 #wsu-signature,
@@ -43,7 +43,6 @@
 
 #spine .spine-sitenav ul li ul li.active a {
 	font-weight: 700;
-	color: #5e5e5e;
 }
 
 #spine .spine-sitenav ul li.parent.opened:after {
@@ -535,7 +534,7 @@ main ul li,
 main ol li,
 footer ul li {
 	font-size: 16px;
-	line-height: 1.4;
+	line-height: 1.2;
 	padding-bottom: .5em;
 }
 
@@ -574,6 +573,36 @@ strong.labeled {
 	margin-bottom: -40px;
 	position: relative;
 	display: block;
+}
+
+.video a.more:after {
+	display: inline-block;
+	font-family: Spine-Icons;
+	font-size: 22px;
+	content: "\F501";
+	border: 2px solid #fcfcfc;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 2;
+	height: 42px;
+	width: 42px;
+	margin-left: .6em;
+	vertical-align: middle;
+	-webkit-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
+	-webkit-transition: border .5s ease;
+	transition: border .5s ease;
+}
+
+.video a:hover {
+	color: #831e0e;
+}
+
+.video a.more:hover:after {
+	border: 2px solid #831e0e;
+	-webkit-transition: border .5s ease;
+	transition: border .5s ease;
 }
 
 blockquote {
@@ -1058,6 +1087,7 @@ body.single-post h2:first-of-type {
 	padding-top: 3em;
 	display: block;
 	cursor: pointer;
+	line-height: 1.1;
 }
 
 .wood-wing {
@@ -1158,6 +1188,17 @@ body.single-post h2:first-of-type {
 		float: none;
 	}
 
+	.flex-body figure {
+		padding-bottom: 1em;
+	}
+
+	.flex-body {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
 	footer[role="footer"] {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -1190,6 +1231,21 @@ body.single-post h2:first-of-type {
 	#shelve:after,
 	#shelve:before {
 		border-color: #fcfcfc;
+	}
+
+	#spine .spine-sitenav ul li.parent.opened:after {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1680px) {
+
+	.wood-wing {
+		padding-bottom: 70%;
+	}
+
+	footer[role="footer"] {
+		padding: 2em 20em;
 	}
 }
 
