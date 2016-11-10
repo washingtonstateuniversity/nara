@@ -389,3 +389,15 @@ function nara_uc_people_html( $html, $person ) {
 
 	return $html;
 }
+
+add_filter( 'wsuwp_uc_people_to_add_to_content', 'nara_uc_content_people' );
+/**
+ * Reverse the array of people appended to UCO post content so they appear in alpha order by last name.
+ *
+ * @param array $people The people associated with the UCO post.
+ *
+ * @return array The reversed array of people.
+ */
+function nara_uc_content_people( $people ) {
+	return array_reverse( $people );
+}
