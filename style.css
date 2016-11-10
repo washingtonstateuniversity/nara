@@ -850,51 +850,6 @@ header.tab {
 	background-size: cover;
 }
 
-/**** Videos ****/
-.video {
-	height: 550px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin-top: -50px;
-	z-index: 50;
-}
-
-.video .video-contain {
-	width: 50%;
-	vertical-align: middle;
-	padding-top: 5%;
-}
-
-.video .single.gutter .column:not(.gutterless) {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.video h1,
-.video p,
-.video a {
-	color: #fcfcfc;
-	letter-spacing: 1px;
-}
-
-.video h1 {
-	font-size: 1.7rem;
-	padding-bottom: .6em;
-	margin-bottom: .4em;
-	text-align: left;
-	border-bottom: 1px solid #fcfcfc;
-	letter-spacing: 2px;
-}
-
-.video p {
-	font-size: 20px;
-	line-height: 1.2;
-}
-
-.video a {
-	font-size: 33px;
-}
-
 /**** Tablepress ****/
 .tablepress {
 	font-size: 16px;
@@ -1200,20 +1155,6 @@ body.single-post h2:first-of-type {
 	padding-left: 2em;
 }
 
-/**** video ****/
-.home .video {
-	margin-top: -150px;
-}
-
-.home .video .video-contain {
-	width: 90%;
-	margin: auto;
-}
-
-.home .video h1 {
-	padding-top: 0;
-}
-
 @media only screen and (max-width: 989px) {
 
 	.unbound.recto.verso {
@@ -1305,6 +1246,194 @@ body.single-post h2:first-of-type {
 
 	footer[role="footer"] {
 		padding: 2em 20em;
+	}
+}
+
+.video {
+	position: relative;
+}
+
+#binder.fluid .row.video:not(.column):not(.rebound) {
+	width: 100vw !important;
+}
+
+.video .column {
+	height: 0;
+	margin-top: -150px;
+	padding-bottom: 56.25%;
+	position: static;
+}
+
+.nara-youtube-wrapper {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+
+.nara-youtube-wrapper,
+.nara-youtube-wrapper iframe {
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.nara-youtube-wrapper iframe {
+	height: 100%;
+	z-index: -1;
+}
+
+.nara-youtube-wrapper iframe.playing {
+	z-index: 201;
+}
+
+.nara-youtube-close {
+	cursor: pointer;
+	display: none;
+	height: 40px;
+	padding: 10px;
+	position: absolute;
+	right: 15px;
+	top: -40px;
+	width: 40px;
+	z-index: 201;
+}
+
+.playing + .nara-youtube-close {
+	display: block;
+}
+
+.nara-youtube-close svg {
+	height: 20px;
+	width: 20px;
+}
+
+.nara-youtube-close svg path {
+	fill: #a03221;
+}
+
+.video-overlay-content {
+	box-sizing: border-box;
+	left: 0;
+	margin: 0 auto;
+	max-width: 790px;
+	padding: 0 2rem;
+	position: absolute;
+	right: 0;
+	top: calc(50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 100%;
+}
+
+.video h1,
+.video p,
+.video a {
+	color: #fcfcfc;
+	letter-spacing: 1px;
+}
+
+.video h1 {
+	font-size: 1.7rem;
+	padding-bottom: .6em;
+	margin-bottom: .4em;
+	text-align: left;
+	border-bottom: 1px solid #fcfcfc;
+}
+
+.home .video h1 {
+	padding-top: 0;
+}
+
+.video p {
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+.video a {
+	font-size: 33px;
+}
+
+.video .more:after {
+	display: inline-block;
+	font-family: Spine-Icons;
+	font-size: 22px;
+	content: "\F501";
+	border: 2px solid #fcfcfc;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 2;
+	height: 42px;
+	width: 42px;
+	margin-left: .6em;
+	vertical-align: middle;
+	-webkit-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
+}
+
+@media only screen and (min-width: 990px) {
+
+	#binder.fluid.max-1188 .row.video {
+		max-width: none;
+	}
+}
+
+.content-syndicate-people-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.uco-syndicate-person-container {
+	box-sizing: border-box;
+	margin: 0 0 1rem;
+	padding: 0 1rem;
+	width: 20%;
+}
+
+.uco-syndicate-person-container + .uco-syndicate-person-container {
+	border-left: 1px solid #d1d2d4;
+}
+
+.uco-syndicate-person-photo {
+	padding: .5rem;
+}
+
+.uco-syndicate-person-photo,
+.uco-syndicate-person-name {
+	text-align: center;
+}
+
+@media only screen and (min-width: 694px) {
+
+	.uco-syndicate-person-container:nth-of-type(6n) {
+		border-left: none;
+	}
+}
+
+@media only screen and (max-width: 693px) and (min-width: 481px) {
+
+	.uco-syndicate-person-container {
+		width: calc(100% / 3);
+	}
+
+	.uco-syndicate-person-container:nth-of-type(3n+1) {
+		border-left: none;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.uco-syndicate-person-container {
+		width: 50%;
+	}
+
+	.uco-syndicate-person-container:nth-of-type(2n+1) {
+		border-left: none;
 	}
 }
 /*# sourceMappingURL=style.css.map */

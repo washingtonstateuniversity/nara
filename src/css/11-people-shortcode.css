@@ -1,0 +1,53 @@
+.content-syndicate-people-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.uco-syndicate-person-container {
+	box-sizing: border-box;
+	margin: 0 0 1rem;
+	padding: 0 1rem;
+	width: 20%;
+}
+
+.uco-syndicate-person-container + .uco-syndicate-person-container {
+	border-left: 1px solid #d1d2d4;
+}
+
+.uco-syndicate-person-photo {
+	padding: .5rem;
+}
+
+.uco-syndicate-person-photo,
+.uco-syndicate-person-name {
+	text-align: center;
+}
+
+@media only screen and (min-width: 694px) {
+
+	.uco-syndicate-person-container:nth-of-type(6n) {
+		border-left: none;
+	}
+}
+
+@media only screen and (max-width: 693px) and (min-width: 481px) {
+
+	.uco-syndicate-person-container {
+		width: calc(100% / 3);
+	}
+
+	.uco-syndicate-person-container:nth-of-type(3n+1) {
+		border-left: none;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.uco-syndicate-person-container {
+		width: 50%;
+	}
+
+	.uco-syndicate-person-container:nth-of-type(2n+1) {
+		border-left: none;
+	}
+}
