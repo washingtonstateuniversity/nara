@@ -7,15 +7,27 @@
 }
 
 .video .column {
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-top: -100px;
+	position: relative;
+	transition: height .25s, padding-bottom .25s;
+}
+
+.video .column.playing {
 	height: 0;
-	margin-top: -150px;
 	padding-bottom: 56.25%;
-	position: static;
 }
 
 .nara-youtube-wrapper {
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 100%;
+	padding-bottom: 0;
+	transition: padding-bottom .25s;
+}
+
+.playing .nara-youtube-wrapper {
 	height: 0;
 	padding-bottom: 56.25%;
 }
@@ -32,7 +44,7 @@
 	z-index: -1;
 }
 
-.nara-youtube-wrapper iframe.playing {
+.playing .nara-youtube-wrapper iframe {
 	z-index: 201;
 }
 
@@ -43,12 +55,12 @@
 	padding: 10px;
 	position: absolute;
 	right: 15px;
-	top: -40px;
+	top: 0;
 	width: 40px;
 	z-index: 201;
 }
 
-.playing + .nara-youtube-close {
+.playing .nara-youtube-close {
 	display: block;
 }
 
@@ -59,18 +71,19 @@
 
 .nara-youtube-close svg path {
 	fill: #a03221;
+	transition: fill .5s ease;
+}
+
+.nara-youtube-close:hover svg path {
+	fill: #000;
 }
 
 .video-overlay-content {
 	box-sizing: border-box;
-	left: 0;
 	margin: 0 auto;
 	max-width: 790px;
-	padding: 0 2rem;
-	position: absolute;
-	right: 0;
-	top: calc(50%);
-	transform: translateY(-50%);
+	padding: 2rem;
+	position: relative;
 	width: 100%;
 }
 
@@ -98,8 +111,10 @@
 	line-height: 1.2;
 }
 
-.video a {
+.video .more {
+	cursor: pointer;
 	font-size: 33px;
+	transition: color .5s ease;
 }
 
 .video .more:after {
@@ -116,6 +131,40 @@
 	margin-left: .6em;
 	vertical-align: middle;
 	transform: rotate(270deg);
+	transition: border .5s ease;
+}
+
+.video .more:hover {
+	color: #831e0e;
+}
+
+.video .more:hover:after {
+	border: 2px solid #831e0e;
+}
+
+@media only screen and (min-width: 791px) {
+
+	.video {
+		min-height: 400px;
+	}
+
+	.video .column {
+		height: 550px;
+		margin-top: -150px;
+		position: static;
+	}
+
+	.nara-youtube-wrapper {
+		padding-bottom: 550px;
+	}
+
+	.nara-youtube-close {
+		top: -40px;
+	}
+
+	.video-overlay-content {
+		margin-top: 150px;
+	}
 }
 
 @media only screen and (min-width: 990px) {

@@ -32,7 +32,7 @@
 				playerVars: {
 					modestbranding: 1,
 					showinfo: 0,
-					//controls: 0,
+					controls: 0,
 					rel: 0
 				},
 				events: {
@@ -60,7 +60,7 @@
 		var video_id = event.target.h.id;
 
 		$('.start-' + video_id).on('click', function() {
-			$('#' + video_id).addClass('playing');
+			$('#' + video_id).closest('.column').addClass('playing');
 			event.target.playVideo();
 		});
 	};
@@ -78,7 +78,7 @@
 	 * Remove the `playing` class to send the video back from whence it came.
 	 */
 	closeVideo = function(video_id) {
-		$('#' + video_id).removeClass('playing');
+		$('#' + video_id).closest('.column').removeClass('playing');
 	}
 
 	/**
