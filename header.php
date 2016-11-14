@@ -21,25 +21,27 @@
 	<?php wp_head(); ?>
 
 	<!-- COMPATIBILITY -->
+	<?php // @codingStandardsIgnoreStart ?>
 	<!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<?php // @codingStandardsIgnoreEnd ?>
 	<noscript><style>#spine #spine-sitenav ul ul li { display: block !important; }</style></noscript>
 </head>
 
 <body <?php body_class(); ?>>
 
 <?php
-	if ( ( spine_get_option( 'spineless' ) == 'true' ) && is_front_page() ) {
-		$spineless = ' spineless';
-	} else {
-		$spineless = '';
-	}
+if ( ( spine_get_option( 'spineless' ) === 'true' ) && is_front_page() ) {
+	$spineless = ' spineless';
+} else {
+	$spineless = '';
+}
 ?>
 
-<a href="#wsuwp-main" class="screen-reader-shortcut"><?php _e( 'Skip to main content' ); ?></a>
-<a href="#spine-sitenav" class="screen-reader-shortcut"><?php _e( 'Skip to navigation' ); ?></a>
+<a href="#wsuwp-main" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to main content' ); ?></a>
+<a href="#spine-sitenav" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to navigation' ); ?></a>
 
 <?php get_template_part( 'parts/before-jacket' ); ?>
 <div id="jacket" class="style-<?php echo esc_attr( spine_get_option( 'theme_style' ) ); ?> colors-<?php echo esc_attr( spine_get_option( 'secondary_colors' ) ); ?> spacing-<?php echo esc_attr( spine_get_option( 'theme_spacing' ) ); ?>">
 <?php get_template_part( 'parts/before-binder' ); ?>
-<div id="binder" class="<?php echo esc_attr( spine_get_option( 'grid_style' ) ); echo $spineless; echo esc_attr( spine_get_option( 'large_format' ) ); echo esc_attr( spine_get_option( 'broken_binding' ) ); ?>">
+<div id="binder" class="<?php echo esc_attr( spine_get_option( 'grid_style' ) . $spineless . spine_get_option( 'large_format' ) . spine_get_option( 'broken_binding' ) ); ?>">
 <?php get_template_part( 'parts/before-main' );
