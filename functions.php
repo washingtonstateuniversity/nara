@@ -55,6 +55,9 @@ add_action( 'wp_enqueue_scripts', 'nara_enqueue_scripts' );
 function nara_enqueue_scripts() {
 	wp_enqueue_script( 'nara-custom', get_stylesheet_directory_uri() . '/js/fontfamily.js', array( 'jquery' ), spine_get_script_version(), true );
 
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'nara-home-parallax', get_stylesheet_directory_uri() . '/js/home-parallax.min.js', array( 'jquery' ), nara_theme_version(), true );
+	}
 }
 
 add_action( 'init', 'nara_remove_spine_wp_enqueue_scripts' );
