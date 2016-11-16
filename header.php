@@ -8,6 +8,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php echo esc_html( spine_get_title() ); ?></title>
 
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/favicon.ico' ); ?>" />
+
 	<!-- RESPOND -->
 	<meta name="viewport" content="width=device-width, user-scalable=yes">
 
