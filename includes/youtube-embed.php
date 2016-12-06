@@ -53,7 +53,7 @@ class WSU_Home_YouTube_Embed {
 		$post = get_post();
 
 		if ( isset( $post->post_content ) && has_shortcode( $post->post_content, 'nara_youtube' ) ) {
-			wp_enqueue_script( 'nara-youtube', get_stylesheet_directory_uri() . '/js/youtube-embed.js', array( 'jquery' ), nara_theme_version(), true );
+			wp_enqueue_script( 'nara-youtube', get_stylesheet_directory_uri() . '/js/youtube-embed.min.js', array( 'jquery' ), nara_theme_version(), true );
 		}
 	}
 }

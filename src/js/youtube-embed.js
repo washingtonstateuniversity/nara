@@ -1,14 +1,14 @@
-(function($, window){
+( function( $, window ) {
 	/**
 	 * Create a script element to load in the YouTube iFrame API and insert it
 	 * into the document.
 	 */
-	loadYoutube = function() {
-		var tag = document.createElement('script');
+	var loadYoutube = function() {
+		var tag = document.createElement( "script" ),
+			firstScriptTag = document.getElementsByTagName( "script" )[ 0 ];
 
 		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		firstScriptTag.parentNode.insertBefore( tag, firstScriptTag );
 	};
 
 	/**
@@ -20,32 +20,33 @@
 	 * and set up objects representing the videos.
 	 */
 	window.onYouTubeIframeAPIReady = function() {
-		$('.inline-youtube-video').each(function(){
-			var video_id = $(this).data('video-id'),
-				video_height = $(this).data('video-height'),
-				video_width = $(this).data('video-width');
+		$( ".inline-youtube-video" ).each( function() {
+			var video_id = $( this ).data( "video-id" ),
+				video_height = $( this ).data( "video-height" ),
+				video_width = $( this ).data( "video-width" ),
+				player;
 
-			player = new YT.Player( 'youtube-video-' + video_id, {
+			player = new window.YT.Player( "youtube-video-" + video_id, {
 				height: video_height,
 				width: video_width,
 				videoId: video_id,
 				playerVars: {
 					modestbranding: 1,
 					showinfo: 0,
-					controls: 0,
+					controls: 1,
 					rel: 0
 				},
 				events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerEnded
+					"onReady": window.onPlayerReady,
+					"onStateChange": window.onPlayerEnded
 				}
-			});
+			} );
 
-			$('.stop-' + video_id).on('click', function() {
+			$( ".stop-" + video_id ).on( "click", function() {
 				player.stopVideo();
-				closeVideo('youtube-video-' + video_id);
-			})
-		});
+				closeVideo( "youtube-video-" + video_id );
+			} );
+		} );
 	};
 
 	/**
@@ -56,36 +57,35 @@
 	 *
 	 * @param event
 	 */
-	window.onPlayerReady = function(event) {
+	window.onPlayerReady = function( event ) {
 		var video_id = event.target.h.id;
 
-		$('.start-' + video_id).on('click', function() {
-			$('#' + video_id).closest('.column').addClass('playing');
+		$( ".start-" + video_id ).on( "click", function() {
+			$( "#" + video_id ).closest( ".column" ).addClass( "playing" );
 			event.target.playVideo();
-		});
+		} );
 	};
 
 	/**
 	 * Return to initial state when the video has ended.
 	 */
-	window.onPlayerEnded = function(event) {
-		if ( 0 == event.data ) {
-			closeVideo(event.target.h.id);
+	window.onPlayerEnded = function( event ) {
+		if ( 0 === event.data ) {
+			closeVideo( event.target.h.id );
 		}
-	}
+	};
 
 	/**
 	 * Remove the `playing` class to send the video back from whence it came.
 	 */
-	closeVideo = function(video_id) {
-		$('#' + video_id).closest('.column').removeClass('playing');
-	}
+	var closeVideo = function( video_id ) {
+		$( "#" + video_id ).closest( ".column" ).removeClass( "playing" );
+	};
 
 	/**
 	 * Fire any actions that we need to happen once the document is ready.
 	 */
-	$(document).ready(function() {
+	$( document ).ready( function() {
 		loadYoutube();
-	});
-
-})(jQuery, window);
+	} );
+} )( jQuery, window );
