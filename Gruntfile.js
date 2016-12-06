@@ -137,7 +137,7 @@ module.exports = function( grunt ) {
 				dest: "js/spine.min.js"
 			},
 			home_parallax: {
-				src: "js/home-parallax.js",
+				src: "src/js/home-parallax.js",
 				dest: "js/home-parallax.min.js"
 			},
 			youtube_embed: {
