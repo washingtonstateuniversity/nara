@@ -7,7 +7,6 @@ class NARA_Parallax_Image {
 	 */
 	public function __construct() {
 		add_shortcode( 'parallax_image', array( $this, 'parallax_image_display' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'parallax_image_enqueue_scripts' ) );
 		add_action( 'register_shortcode_ui', array( $this, 'parallax_image_shortcode_ui' ) );
 	}
 
@@ -36,6 +35,9 @@ class NARA_Parallax_Image {
 		if ( in_array( '', $atts, true ) ) {
 			return '';
 		}
+
+		// Enqueue JavaScript for handling the parallax animation.
+		wp_enqueue_script( 'nara-home-parallax', get_stylesheet_directory_uri() . '/js/home-parallax.min.js', array( 'jquery' ), nara_theme_version(), true );
 
 		$wrapper_classes = 'parallax-image-wrapper ' . esc_html( $atts['position'] );
 		$wrapper_style = 'z-index: ' . esc_html( $atts['z_index'] ) . ';';
@@ -69,17 +71,6 @@ class NARA_Parallax_Image {
 		ob_end_clean();
 
 		return $content;
-	}
-
-	/**
-	 * Enqueue scripts used on the front end.
-	 */
-	public function parallax_image_enqueue_scripts() {
-		$post = get_post();
-
-		if ( isset( $post->post_content ) && has_shortcode( $post->post_content, 'parallax_image' ) ) {
-			wp_enqueue_script( 'nara-home-parallax', get_stylesheet_directory_uri() . '/js/home-parallax.min.js', array( 'jquery' ), nara_theme_version(), true );
-		}
 	}
 
 	/**
